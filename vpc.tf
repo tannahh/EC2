@@ -70,6 +70,9 @@ resource "aws_instance" "EC2" {
     instance_type = var.instance_type
     subnet_id = aws_subnet.Public_subnet.id
     security_groups = [aws_security_group.EC2_sg.id]
+    tags = {
+      name = "VPC2"
+    }
 }
 
 
